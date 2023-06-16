@@ -1,11 +1,11 @@
 import streamlit as st
 from langchain.llms import OpenAI
 from langchain import PromptTemplate, LLMChain
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 import os
 
-# os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 email_template = """
 Write an email to {addressed_to} with the subject {subject} in {tone} tone.
